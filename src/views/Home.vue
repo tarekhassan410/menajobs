@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="jobs-list-wrapper">
+    <div id="jobs-list">
+      <search-form />
+
+      <jobs-list />
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import JobsList from "../components/JobsList/JobsList";
+import SearchForm from "../components/SearchForm/index";
 export default {
   name: "Home",
+
   components: {
-    HelloWorld
+    JobsList,
+    SearchForm
   }
 };
 </script>
+
+<style scoped>
+#jobs-list-wrapper {
+  background: #f0fafb;
+  min-height: 90vh;
+}
+#jobs-list {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+@media only screen and (max-width: 600px) {
+}
+</style>
