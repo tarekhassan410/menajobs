@@ -26,6 +26,7 @@ export default {
   },
   created() {
     this.$store.dispatch("loadJobsList");
+    console.log(process.env);
   },
   components: {
     JobCard
