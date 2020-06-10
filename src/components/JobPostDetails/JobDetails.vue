@@ -8,7 +8,10 @@
           </button>
         </router-link>
       </div>
-      <h3>{{ jobDetails.position }}</h3>
+      <div class="position">
+        <h3 class="position-title">{{ jobDetails.position }}</h3>
+        <button>Apply</button>
+      </div>
       <div>
         <h4 class="company-name">{{ jobDetails.company }}</h4>
       </div>
@@ -48,21 +51,37 @@ export default {
   padding-bottom: 5rem;
   padding-top: 0.2rem;
 }
-#job-details-container h3,
 #job-details-container h4,
 #job-details-container div {
   margin-top: 0.8rem;
 }
 
-#job-details-container h3 {
-  color: #5ea4a4;
-}
 #job-details-container p {
   margin-top: 1rem;
 }
 #job-details-container .back-section {
   margin-top: 0.4rem;
 }
+
+.position {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.position-title {
+  color: #5ea4a4;
+}
+
+.position button {
+  padding: 0.5rem 1rem;
+  background-color: #5ea4a4;
+  border: none;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 .back-section button {
   padding: 0.5rem 1.5rem;
   background-color: #5ea4a4;
@@ -70,6 +89,7 @@ export default {
   color: #f0fafb;
   font-family: "poppins", serif;
   font-weight: 600;
+  cursor: pointer;
 }
 .company-name {
   color: #555555;

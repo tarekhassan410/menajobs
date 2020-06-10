@@ -3,9 +3,22 @@
     <form>
       <select id="select-category" @change="handleSearchTermChange">
         <option value="All">Select category</option>
-        <option value="Marketing">Marketing</option>
-        <option value="Design">Design</option>
-        <option value="Programming">Programming</option>
+
+        <optgroup label="Marketing">
+          <option value="SEO marketing">SEO</option>
+          <option value="SMM marketing">SMM</option>
+        </optgroup>
+
+        <optgroup label="Design">
+          <option value="Graphoc design">Graphic</option>
+          <option value="Web design">Web design</option>
+        </optgroup>
+
+        <optgroup label="Programming">
+          <option value="Frontend">Frontend developer</option>
+          <option value="Backend">Backend developer developer</option>
+          <option value="Fullstack">Full stack</option>
+        </optgroup>
       </select>
     </form>
   </div>

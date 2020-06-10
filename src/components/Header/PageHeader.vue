@@ -7,8 +7,8 @@
       </router-link>
     </div>
     <ul>
-      <li class="post-job-action">
-        <router-link to="/Postjob">Post a job</router-link>
+      <li>
+        <router-link class="post-job-action" to="/Postjob">Post a job</router-link>
       </li>
     </ul>
   </nav>

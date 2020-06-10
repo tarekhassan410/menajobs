@@ -32,6 +32,10 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    async insertNewJobPost(state, payload) {
+      console.log(payload);
+    },
+    //
     async loadJobsList(state) {
       let jobsPosts = [];
       const jobsPostsCollection = db.collection("jobsPosts");
