@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen bg-gray-200 px-2">
+  <section class="min-h-screen bg-gray-200 px-3">
     <div class="container m-auto py-5">
       <div>
         <router-link to="/">

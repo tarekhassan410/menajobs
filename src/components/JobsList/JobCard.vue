@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white my-5 mx-2 md:mx-2 lg:mx-0 p-5 shadow-lg hover:shadow-xl rounded-lg">
+  <div class="bg-white my-5 px-4 py-3 shadow-lg hover:shadow-xl rounded-lg">
     <div>
       <div>
         <h3>

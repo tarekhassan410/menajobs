@@ -1,7 +1,7 @@
 <template>
   <div id="jobs-list-wrapper" class="bg-gray-200">
-    <div class="container m-0 m-auto">
-      <section class="text-lg pt-2 px-2">Jobs curated for designers, marketers and developers.</section>
+    <div class="container m-0 m-auto px-3">
+      <section class="text-lg pt-2">Jobs curated for designers, marketers and developers.</section>
       <search-form />
       <jobs-list />
     </div>

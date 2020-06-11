@@ -1,5 +1,5 @@
 <template>
-  <nav class="container h-16 px-2 m-0 m-auto">
+  <nav class="container h-16 px-3 m-0 m-auto">
     <ul class="flex h-full justify-between items-center">
       <li>
         <router-link class="text-white font-bold rounded" to="/">Mena jobs</router-link>

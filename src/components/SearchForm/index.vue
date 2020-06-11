@@ -1,25 +1,37 @@
 <template>
   <div>
     <form>
-      <select id="select-category" @change="handleSearchTermChange">
-        <option value="All">Select category</option>
+      <div class="inline-block relative w-full mt-2">
+        <select
+          class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+          @change="handleSearchTermChange"
+        >
+          <option value="All">Select category</option>
 
-        <optgroup label="Marketing">
-          <option value="SEO marketing">SEO</option>
-          <option value="SMM marketing">Social media marketing</option>
-        </optgroup>
+          <optgroup label="Marketing">
+            <option value="SEO marketing">SEO</option>
+            <option value="SMM marketing">Social media marketing</option>
+          </optgroup>
 
-        <optgroup label="Design">
-          <option value="Graphoc design">Graphic</option>
-          <option value="Web design">Web design</option>
-        </optgroup>
+          <optgroup label="Design">
+            <option value="Graphoc design">Graphic</option>
+            <option value="Web design">Web design</option>
+          </optgroup>
 
-        <optgroup label="Programming">
-          <option value="Frontend">Frontend developer</option>
-          <option value="Backend">Backend developer developer</option>
-          <option value="Fullstack">Full stack</option>
-        </optgroup>
-      </select>
+          <optgroup label="Programming">
+            <option value="Frontend">Frontend developer</option>
+            <option value="Backend">Backend developer developer</option>
+            <option value="Fullstack">Full stack</option>
+          </optgroup>
+        </select>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+        >
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+          </svg>
+        </div>
+      </div>
     </form>
   </div>
 </template>
@@ -46,26 +58,4 @@ export default {
 </script>
 
 <style scoped>
-form {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: 4rem;
-}
-#select-category {
-  width: 100%;
-  height: 2.2rem;
-  border: 0.1rem #5ea4a4 solid;
-  border-radius: 2px;
-  padding: 0 0.2rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  color: black;
-}
-
-@media only screen and (max-width: 950px) {
-  form {
-    padding: 1rem 0.5rem;
-  }
-}
 </style>
