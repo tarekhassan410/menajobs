@@ -1,11 +1,14 @@
 <template>
-  <div id="jobs-list-container">
+  <div>
     <div v-for="position in positionsList" :key="position.id">
       <job-card
         :position="position.position"
         :tags="position.tags"
         :company="position.company"
         :id="position.id"
+        :yearsOfExperience="position.yearsOfExperience"
+        :location="position.location"
+        :timePosted="position.timePosted"
       />
     </div>
   </div>
@@ -33,6 +36,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-</style>

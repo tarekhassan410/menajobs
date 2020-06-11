@@ -1,57 +1,95 @@
 <template>
-  <section id="post-job-main-container">
-    <div id="wrapper">
-      <div class="back-section">
+  <section class="min-h-screen bg-gray-200 px-2">
+    <div class="container m-auto py-5">
+      <div>
         <router-link to="/">
-          <button>
+          <button class="text-white bg-teal-700 shadow-md py-2 px-4 rounded">
             <i class="fas fa-arrow-left"></i> Back
           </button>
         </router-link>
       </div>
-      <div class="post-job-form-container">
-        <form class="post-job-form" @submit.prevent="insertJobPost">
-          <div>
-            <label class="semi-bold-font">Choose position of candidate</label>
+      <div>
+        <form @submit.prevent="insertJobPost">
+          <div class="mt-6">
+            <label>Choose position of candidate</label>
           </div>
-          <select @change="changePosition">
-            <option value="All">Position of candidate</option>
+          <div class="inline-block relative w-50">
+            <select
+              class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+              @change="changePosition"
+            >
+              <option value="All">Position of candidate</option>
 
-            <optgroup label="Marketing">
-              <option value="SEO marketing">SEO</option>
-              <option value="SMM marketing">SMM</option>
-            </optgroup>
+              <optgroup label="Marketing">
+                <option value="SEO marketing">SEO</option>
+                <option value="SMM marketing">SMM</option>
+              </optgroup>
 
-            <optgroup label="Design">
-              <option value="Graphoc design">Graphic</option>
-              <option value="Web design">Web design</option>
-            </optgroup>
+              <optgroup label="Design">
+                <option value="Graphoc design">Graphic</option>
+                <option value="Web design">Web design</option>
+              </optgroup>
 
-            <optgroup label="Programming">
-              <option value="Frontend">Frontend developer</option>
-              <option value="Backend">Backend developer developer</option>
-              <option value="Fullstack">Full stack</option>
-            </optgroup>
-          </select>
+              <optgroup label="Programming">
+                <option value="Frontend">Frontend developer</option>
+                <option value="Backend">Backend developer developer</option>
+                <option value="Fullstack">Full stack</option>
+              </optgroup>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </div>
+          </div>
 
-          <div>
+          <div class="mt-2">
             <label>Years of experience</label>
           </div>
 
-          <select @change="updateYearsOfExp">
-            <option>Years of experiece</option>
-            <option value="0-2">0-2</option>
-            <option value="2-3">2-3</option>
-            <option value="3-5">3-5</option>
-            <option value="5+">5 and more</option>
-          </select>
-
-          <div>
-            <label class="semi-bold-font">Description</label>
+          <div class="inline-block relative w-50">
+            <select
+              class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+              @change="updateYearsOfExp"
+            >
+              <option>Years of experiece</option>
+              <option value="0-2">0-2</option>
+              <option value="2-3">2-3</option>
+              <option value="3-5">3-5</option>
+              <option value="5+">5 and more</option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </div>
           </div>
-          <textarea v-model="description" cols="10" rows="10" />
+          <div class="mt-2">
+            <label>Description</label>
+          </div>
+          <textarea
+            class="w-full h-40 border rounded focus:outline-none focus:shadow-outline"
+            v-model="description"
+          ></textarea>
 
-          <div class="submit-container">
-            <input type="submit" class="submit-button" />
+          <div class="w-100 mt-2">
+            <button type="submit" class="text-white bg-teal-700 shadow-md py-2 px-4 rounded">Add</button>
           </div>
         </form>
       </div>
@@ -87,67 +125,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-#post-job-main-container {
-  background: #f0fafb;
-  min-height: 90vh;
-}
-#wrapper {
-  max-width: 950px;
-  margin: 0 auto;
-  padding-bottom: 5rem;
-}
-.semi-bold-font {
-  font-weight: 500;
-}
-.back-section {
-  padding-top: 0.6rem;
-}
-.back-section button {
-  padding: 0.5rem 1.5rem;
-  background-color: #5ea4a4;
-  border: none;
-  color: #f0fafb;
-  font-family: "poppins", serif;
-  font-weight: 600;
-  cursor: pointer;
-}
-.post-job-form-container {
-  margin-top: 1rem;
-}
-.post-job-form-container div {
-  margin-top: 0.5rem;
-}
-.post-job-form-container select {
-  width: 100%;
-  padding: 0.2rem;
-  font-family: "poppins", serif;
-}
-.post-job-form-container textarea {
-  width: 100%;
-  padding: 0.2rem;
-}
-
-.submit-container {
-  display: flex;
-  justify-content: center;
-}
-
-.submit-button {
-  width: 20%;
-  font-weight: 500;
-  background: #5ea4a4;
-  border: none;
-  color: white;
-  padding: 0.4rem 0.5rem;
-}
-@media only screen and (max-width: 1024px) {
-  #post-job-main-container {
-    padding: 0.2rem 1rem 0rem 1rem;
-  }
-  .back-section button {
-    padding: 0.5rem 1rem;
-  }
-}
-</style>

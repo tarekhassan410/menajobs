@@ -1,26 +1,26 @@
 <template>
-  <div id="job-details">
-    <div id="job-details-container">
-      <div class="back-section">
+  <section class="min-h-screen bg-gray-200 px-2">
+    <div class="container m-auto py-5">
+      <div>
         <router-link to="/">
-          <button>
+          <button class="text-white bg-teal-700 shadow-md py-2 px-4 rounded">
             <i class="fas fa-arrow-left"></i> Back
           </button>
         </router-link>
       </div>
-      <div class="position">
-        <h3 class="position-title">{{ jobDetails.position }}</h3>
-        <button>Apply</button>
+      <div class="flex justify-between mt-5">
+        <h3 class="font-bold">{{ jobDetails.position }}</h3>
+        <button class="text-white font-bold bg-teal-700 shadow-md font-bold py-2 px-4 rounded">Apply</button>
       </div>
       <div>
-        <h4 class="company-name">{{ jobDetails.company }}</h4>
+        <h4 class="text-gray-900">{{ jobDetails.company }} - {{ jobDetails.location }}</h4>
       </div>
-      <div class="tag-holder">
+      <div class="mt-2">
         <span v-for="tag in jobDetails.tags" class="tag" :key="tag">#{{ tag }}</span>
       </div>
-      <p class="job-description">{{ jobDetails.description }}</p>
+      <p class="mt-2">{{ jobDetails.description }}</p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -39,94 +39,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-#job-details {
-  background: #f0fafb;
-  min-height: 90vh;
-}
-#job-details-container {
-  max-width: 950px;
-  margin: 0 auto;
-  padding-bottom: 5rem;
-  padding-top: 0.2rem;
-}
-#job-details-container h4,
-#job-details-container div {
-  margin-top: 0.8rem;
-}
-
-#job-details-container p {
-  margin-top: 1rem;
-}
-#job-details-container .back-section {
-  margin-top: 0.4rem;
-}
-
-.position {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.position-title {
-  color: #5ea4a4;
-}
-
-.position button {
-  padding: 0.5rem 1rem;
-  background-color: #5ea4a4;
-  border: none;
-  color: white;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.back-section button {
-  padding: 0.5rem 1.5rem;
-  background-color: #5ea4a4;
-  border: none;
-  color: #f0fafb;
-  font-family: "poppins", serif;
-  font-weight: 600;
-  cursor: pointer;
-}
-.company-name {
-  color: #555555;
-}
-#job-details-container .tag-holder {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-.tag {
-  padding: 0.2rem 0.5rem;
-  background-color: #5ea4a4;
-  color: #222;
-  margin-right: 1rem;
-}
-
-.tag:first-child {
-  margin: 0;
-  margin-right: 1rem;
-}
-.job-description {
-  color: #111111;
-}
-@media only screen and (max-width: 950px) {
-  #job-details {
-    padding: 1rem 1rem;
-  }
-}
-@media only screen and (max-width: 450px) {
-  .tag {
-    margin-bottom: 1rem;
-  }
-  .tag:first-child {
-    margin-bottom: 1rem;
-    margin-left: 0;
-  }
-}
-</style>

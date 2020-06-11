@@ -35,7 +35,7 @@ export default new Vuex.Store({
     async insertNewJobPost(state, payload) {
       console.log(payload);
     },
-    //
+    // This function to load all jobs
     async loadJobsList(state) {
       let jobsPosts = [];
       const jobsPostsCollection = db.collection("jobsPosts");
@@ -48,6 +48,9 @@ export default new Vuex.Store({
               id: doc.data().id,
               tags: doc.data().tags,
               position: doc.data().position,
+              yearsOfExperience: doc.data().yearsOfExperience,
+              location: doc.data().location,
+              timePosted: doc.data().timePosted,
             });
           });
         })

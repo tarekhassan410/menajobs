@@ -1,8 +1,8 @@
 <template>
-  <div id="jobs-list-wrapper">
-    <div id="jobs-list">
+  <div id="jobs-list-wrapper" class="bg-gray-200">
+    <div class="container m-0 m-auto">
+      <section class="text-lg pt-2 px-2">Jobs curated for designers, marketers and developers.</section>
       <search-form />
-
       <jobs-list />
     </div>
   </div>
@@ -24,14 +24,6 @@ export default {
 
 <style scoped>
 #jobs-list-wrapper {
-  background: #f0fafb;
   min-height: 90vh;
-}
-#jobs-list {
-  max-width: 950px;
-  margin: 0 auto;
-  padding-bottom: 5rem;
-}
-@media only screen and (max-width: 600px) {
 }
 </style>

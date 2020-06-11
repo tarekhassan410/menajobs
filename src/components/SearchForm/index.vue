@@ -6,7 +6,7 @@
 
         <optgroup label="Marketing">
           <option value="SEO marketing">SEO</option>
-          <option value="SMM marketing">SMM</option>
+          <option value="SMM marketing">Social media marketing</option>
         </optgroup>
 
         <optgroup label="Design">
