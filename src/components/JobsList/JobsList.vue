@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-5 min-h-screen">
     <div v-for="position in positionsList" :key="position.id">
       <job-card
         :position="position.position"

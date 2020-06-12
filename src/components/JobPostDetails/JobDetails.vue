@@ -1,6 +1,6 @@
 <template>
-  <section class="min-h-screen bg-gray-200 px-3">
-    <div class="container m-auto py-5">
+  <section class="bg-gray-200">
+    <div class="min-h-screen container m-auto bg-white py-5 px-3">
       <div>
         <router-link to="/">
           <button class="text-white bg-teal-700 shadow-md py-2 px-4 rounded">
@@ -8,17 +8,20 @@
           </button>
         </router-link>
       </div>
-      <div class="flex justify-between mt-5">
-        <h3 class="font-bold">{{ jobDetails.position }}</h3>
+      <div class="flex justify-between items-center mt-5">
+        <h3 class="font-bold text-lg tracking-wide">{{ jobDetails.position }}</h3>
         <button class="text-white font-bold bg-teal-700 shadow-md font-bold py-2 px-4 rounded">Apply</button>
       </div>
       <div>
-        <h4 class="text-gray-900">{{ jobDetails.company }} - {{ jobDetails.location }}</h4>
+        <h4
+          class="text-gray-900 mt-6"
+        >{{ jobDetails.company }} - {{ jobDetails.location }}, {{jobDetails.type}},</h4>
       </div>
-      <div class="mt-2">
-        <span v-for="tag in jobDetails.tags" class="tag" :key="tag">#{{ tag }}</span>
+
+      <p class="mt-6 leading-relaxed">{{ jobDetails.description }}</p>
+      <div class="mt-6">
+        <span v-for="tag in jobDetails.tags" class="mr-3" :key="tag">#{{ tag }}</span>
       </div>
-      <p class="mt-2">{{ jobDetails.description }}</p>
     </div>
   </section>
 </template>

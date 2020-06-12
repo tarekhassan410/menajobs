@@ -6,7 +6,7 @@
       </li>
       <li>
         <router-link
-          class="bg-white text-teal-700 shadow-md font-bold py-2 px-4 rounded"
+          class="bg-white text-teal-700 shadow-md font-bold text-sm py-2 px-4 rounded"
           to="/Postjob"
         >+ New job</router-link>
       </li>
