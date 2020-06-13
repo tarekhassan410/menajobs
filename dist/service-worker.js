@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.f3becc8d67bca8177ad7310052ba5434.js"
+  "/precache-manifest.6feb9a05f1a241ca0111b1d90307a234.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "mena-jobs"});
