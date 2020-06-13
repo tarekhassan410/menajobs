@@ -1,10 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import firebase from "firebase";
-import fbConfig from "../Firebase/FirebaseConfig";
-// firestore
-import "firebase/firestore";
-const db = firebase.firestore();
+import db from "../Firebase/FirebaseConfig";
 
 Vue.use(Vuex);
 
@@ -21,7 +17,6 @@ export default new Vuex.Store({
   },
   getters: {
     getJobsList(state) {
-      console.log(fbConfig);
       return state.jobsList;
     },
     getJobDetails(state) {
